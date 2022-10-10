@@ -2,21 +2,14 @@ import java.util.Scanner;
 class disariumNumber 
  
 {  
-      
-    public static int calculateLength(int n)
-    {  
-        int length = 0;  
-    
-	    length=(int)Math.log10(n)+1;
-        return length;  
-    }  
+   
       
     public static void main(String[] args) 
     {
 		Scanner sc=new Scanner(System.in);
-        int num , sum = 0, rem = 0, temp; 
+        int num , sum = 0, r = 0, temp; 
 			num=sc.nextInt();
-        int len = calculateLength(num);  
+        int len =(int) Math.log10(num)+1;  
           
          
         temp = num;  
@@ -24,8 +17,8 @@ class disariumNumber
          
         while(num > 0)
         {  
-            rem = num%10;  
-            sum = sum + (int)Math.pow(rem,len);  
+            r = num%10;  
+            sum = sum + (int)Math.pow(r,len);  
             num = num/10;  
             len--;  
         }  
